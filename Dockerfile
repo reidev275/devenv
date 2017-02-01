@@ -17,7 +17,8 @@ RUN apt-get install -y curl
 RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-RUN curl -LSso ~/.vimrc https://raw.githubusercontent.com/reidev275/vimrc/master/.vimrc
+RUN curl -LSso ~/.vimrc https://raw.githubusercontent.com/reidev275/devenv/master/.vimrc
+RUN curl -LSso ~/.bashrc https://raw.githubusercontent.com/reidev275/devenv/master/.bashrc
 
 RUN git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 RUN git clone https://github.com/ElmCast/elm-vim.git ~/.vim/bundle/elm-vim
