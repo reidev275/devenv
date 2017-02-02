@@ -9,14 +9,19 @@ MAINTAINER Reid Evans <reidev275@gmail.com>
 #environment config
 RUN apt-get update  && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install -y git
-RUN apt-get install -y vim
 RUN apt-get install -y tmux
 RUN apt-get install -y curl
+RUN apt-get install -y zip unzip
 
+#Vim8
+RUN apt-get install ncurses-dev
+RUN wget https://github.com/vim/vim/archive/master.zip
+RUN unzip master.zip
+RUN cd vim-master && cd src/ && ./configure && make && make install
 
 #vim plugins
-RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+# RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+# curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 RUN curl -LSso ~/.vimrc https://raw.githubusercontent.com/reidev275/devenv/master/.vimrc
 RUN curl -LSso ~/.bashrc https://raw.githubusercontent.com/reidev275/devenv/master/.bashrc

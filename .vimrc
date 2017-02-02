@@ -38,7 +38,7 @@ set cmdheight=1
 
 colorscheme moriarty 
 
-call pathogen#infect()
+" call pathogen#infect()
 
 " -- Syntastic
 

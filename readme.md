@@ -10,5 +10,5 @@
 ###Using
 
 1. cd into your code directory
-2. `docker run -itv %cd%/usr/src/app devenv bash`
+2. `docker run -itv %cd%:/usr/src/app devenv bash`
 3. `cd usr/src/app`
