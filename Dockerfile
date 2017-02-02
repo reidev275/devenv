@@ -10,6 +10,7 @@ MAINTAINER Reid Evans <reidev275@gmail.com>
 RUN apt-get update  && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install -y git
 RUN apt-get install -y vim
+RUN apt-get install -y tmux
 RUN apt-get install -y curl
 
 
