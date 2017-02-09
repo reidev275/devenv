@@ -17,7 +17,7 @@ RUN apt-get install -y zip unzip
 RUN apt-get install ncurses-dev
 RUN wget https://github.com/vim/vim/archive/master.zip
 RUN unzip master.zip
-RUN cd vim-master && cd src/ && ./configure && make && make install
+RUN cd vim-master && cd src/ && ./configure --with-features=big && make && make install
 
 #dotfiles
 RUN curl -LSso ~/.vimrc https://raw.githubusercontent.com/reidev275/devenv/master/.vimrc
