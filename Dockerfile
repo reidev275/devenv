@@ -12,6 +12,7 @@ RUN apt-get install -y git
 RUN apt-get install -y tmux
 RUN apt-get install -y curl
 RUN apt-get install -y zip unzip
+RUN git clone --depth=1 https://github.com/Bash-it/bash-it.git ~.bash_it && ~/.bash_it/install.sh --silent
 
 #Vim8
 RUN apt-get install ncurses-dev
@@ -21,7 +22,7 @@ RUN cd vim-master && cd src/ && ./configure --with-features=big && make && make 
 
 #dotfiles
 RUN curl -LSso ~/.vimrc https://raw.githubusercontent.com/reidev275/devenv/master/.vimrc
-RUN curl -LSso ~/.bashrc https://raw.githubusercontent.com/reidev275/devenv/master/.bashrc
+# RUN curl -LSso ~/.bashrc https://raw.githubusercontent.com/reidev275/devenv/master/.bashrc
 
 #vim plugins
 RUN mkdir -p ~/.vim/pack/plugins/start
