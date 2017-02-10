@@ -38,8 +38,6 @@ set cmdheight=1
 
 colorscheme moriarty 
 
-" call pathogen#infect()
-
 " -- Syntastic
 
 set statusline+=%#warningmsg#
@@ -47,18 +45,13 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1 
-let g:syntastic_loc_list_height = 4
+let g:syntastic_javascript_checkers = ['eslint']
 
 
 " -- Elm
 let g:elm_syntastic_show_warnings = 1
 let g:elm_format_autosave = 1
-
-" -- JS
-let JSHintUpdateWriteOnly = 1
-
-" -- fsi
-map <Leader>r :FsiRun<CR>
