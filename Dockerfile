@@ -12,7 +12,7 @@ RUN apt-get install -y git
 RUN apt-get install -y tmux
 RUN apt-get install -y curl
 RUN apt-get install -y zip unzip
-# RUN git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && ~/.bash_it/install.sh --silent
+RUN git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && ~/.bash_it/install.sh --silent
 
 #Vim8
 RUN apt-get install ncurses-dev
