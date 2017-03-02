@@ -31,7 +31,7 @@ RUN git clone https://github.com/ElmCast/elm-vim.git ~/.vim/pack/plugins/start/e
 RUN git clone https://github.com/raichoo/purescript-vim.git ~/.vim/pack/plugins/start/purescript-vim
 RUN git clone https://github.com/FrigoEU/psc-ide-vim.git ~/.vim/pack/plugins/start/psc-ide-vim
 RUN git clone https://github.com/jelera/vim-javascript-syntax.git ~/.vim/pack/plugins/start/vim-javascript-syntax
-
+RUN git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/pack/plugins/start/typescript-vim
 
 #vim colors
 RUN mkdir ~/.vim/colors
