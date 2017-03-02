@@ -34,6 +34,7 @@ set t_Co=256
 if (has("termguicolors"))
 	set termguicolors
 endif
+
 set cmdheight=1
 
 colorscheme moriarty 
