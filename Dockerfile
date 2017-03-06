@@ -43,6 +43,9 @@ RUN npm install -g uglify-js && \
     npm install -g node-sass && \
  	npm rebuild node-sass
 
+#angular
+RUN npm install -g @angular/cli
+
 # purescript
 RUN npm install -g purescript && \
 	npm install -g pulp bower
